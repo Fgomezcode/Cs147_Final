@@ -1,0 +1,39 @@
+<div id="Sensor_Values" class="load">
+  Current Temperature:
+  {{ sensorTemperature }}
+  <br>
+  Current Humidity:
+  {{ sensorHumidity }}
+  <br>
+  Current Soil Moisture:
+  {{sensorSoil}}
+  <br>
+  Current Light:
+  {{sensorDayLight}}
+</div>
+
+
+<div id="chart" >
+    <script  id="Chart_Values" class="load">
+         const ctx = document.getElementById('myChart');
+              
+      new Chart(ctx, {
+      type: 'bar',
+      data: {
+      labels: ['Temperature', 'Humidity', 'Soil Moisture', 'Daylight'],
+      datasets: [{
+        label: 'Plant Status',
+        data: [{{ sensorTemperature }}, {{ sensorHumidity }}, {{sensorSoil}}, {{sensorDayLight}}],
+        borderWidth: 1
+        }]
+        },
+        options: {
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+        }
+        });
+</script>
+</div>

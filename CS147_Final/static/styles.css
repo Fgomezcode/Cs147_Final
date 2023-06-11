@@ -1,0 +1,25 @@
+body {
+    background-color: #50ffb1;
+    margin:0, auto;
+}
+
+#Sensor_Values{
+ background-color:#ffffea; 
+ text-align: center;
+ padding: 3rem; 
+ margin: 2rem; 
+ border-style: solid;
+ border-radius: 3rem;
+ border-color: #ff5e5b;
+}
+   
+#page-title{
+    text-align: center;
+}
+
+#Chart_Values{
+
+  height: 200px;
+  width: 50%;
+
+}

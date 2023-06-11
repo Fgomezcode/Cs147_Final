@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Plant Pal</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+        <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
+        {{turbo()}}
+    </head>
+      
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <h1 id="page-title">PLANT PAL</h1>
+
+        <canvas  id="myChart" width="900" height="600"></canvas>
+        {% include "update.html" %}
+            
+
+            
+        <form action="/" method="post">
+            <button name="Water Button" value="water">Water Plant</button>
+            <button name="Mist Button" value="water">Mist Plant</button>
+        </form>
+        <script src="" async defer></script>
+
+
+    </body>
+</html>
